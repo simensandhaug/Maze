@@ -45,9 +45,9 @@ class Game {
     }
 }
 let size = 750;
-let gridSize = 5;
 let lastLevel = 5;
 let increment = 2;
+let gridSize = 5;
 let animate = true;
 let game = new Game(size, gridSize, gridSize, lastLevel, increment, animate);
 game.initializeGame();
