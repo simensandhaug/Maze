@@ -40,7 +40,7 @@ class Game {
     }
     gameOver = () => {
         containerEl.innerHTML = `<div><h1>Gameover</h1></div>`
-        containerEl.innerHTML += `<h2>Time to reach level ${this.lastLevel}:</h2><br><h2>${game.time/100} seconds</h2>`;
+        containerEl.innerHTML += `<h2>Time to finish level ${this.lastLevel}:</h2><br><h2>${game.time/100} seconds</h2>`;
         containerEl.innerHTML += `<button onclick="location.reload()">Play Again</button>`
     }
 }
@@ -48,7 +48,7 @@ let size = 750;
 let gridSize = 5;
 let lastLevel = 5;
 let increment = 2;
-let animate = false;
+let animate = true;
 let game = new Game(size, gridSize, gridSize, lastLevel, increment, animate);
 game.initializeGame();
 setInterval(() => {
