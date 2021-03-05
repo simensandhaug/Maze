@@ -29,6 +29,7 @@ class Player {
     draw = () => {
         ctx.fillStyle = 'blue';
         ctx.fillRect(this.x + 5, this.y + 5, game.maze.size / game.maze.columns - 10, game.maze.size / game.maze.rows - 10);
+        ctx.drawImage(game.geirIMG, this.x + 5, this.y + 5, game.maze.size / game.maze.columns - 10, game.maze.size / game.maze.rows - 10)
     }
     up = () => {
         try {

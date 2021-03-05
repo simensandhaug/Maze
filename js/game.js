@@ -6,6 +6,10 @@ const containerEl = document.querySelector(".flex-container");
 
 class Game {
     constructor(startSize, startColumns, startRows, lastLevel, increment, animateMaze) {
+        this.geirIMG = new Image();
+        this.geirIMG.src = '../images/geir.png';
+        this.jonnernIMG = new Image();
+        this.jonnernIMG.src = '../images/screaming.png';
         this.size = startSize;
         this.columns = startColumns;
         this.rows = startRows;
@@ -45,10 +49,10 @@ class Game {
     }
 }
 let size = 750;
-let lastLevel = 5;
+let lastLevel = 7;
 let increment = 2;
 let gridSize = 5;
-let animate = true;
+let animate = false;
 let game = new Game(size, gridSize, gridSize, lastLevel, increment, animate);
 game.initializeGame();
 setInterval(() => {
